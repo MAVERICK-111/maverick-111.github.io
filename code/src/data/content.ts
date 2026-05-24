@@ -35,7 +35,7 @@ export const personal: Personal = {
   name: "Piyush Patil",
   role: "Engineer & Developer",
   tagline:
-    "Engineering undergrad at VJTI Mumbai — I ship code that solves real problems, from agentic AI pipelines to full-stack products. When I'm not building, I'm usually exploring new things.",
+    "Engineering undergrad at VJTI Mumbai - I ship code that solves real problems, from agentic AI pipelines to full-stack products. When I'm not building, I'm usually exploring new things.",
   email: "piyush3patil2005@gmail.com",
   location: "Mumbai, India",
   resumeUrl: "https://drive.google.com/file/d/1RX0TJw2xO7kdnpiwS8Ax8YwjY9nNt_CV/preview",
@@ -44,7 +44,7 @@ export const personal: Personal = {
 // ABOUT
 export const about: AboutContent = {
   paragraphs: [
-    "I'm Piyush — an engineering student at VJTI Mumbai who lives at the intersection of systems thinking and shipping software. I work across AI/ML, full-stack development, and competitive programming.",
+    "I'm Piyush - an engineering student at VJTI Mumbai who lives at the intersection of systems thinking and shipping software. I work across AI/ML, full-stack development, and competitive programming.",
     "I've built social platforms with real-time feeds, AI-powered health companions, and agentic systems that automate enterprise workflows. "
   ],
   details: [
@@ -80,7 +80,7 @@ export const projects: Project[] = [
   {
     title: "AssignmentLens",
     description:
-      "A deterministic assignment intelligence system for education that scores assignment quality and student submissions using Bloom's Taxonomy, clarity analysis, and Jaccard similarity — no LLMs at runtime.",
+      "A deterministic assignment intelligence system for education that scores assignment quality and student submissions using Bloom's Taxonomy, clarity analysis, and Jaccard similarity - no LLMs at runtime.",
     tags: ["Node.js", "JavaScript", "NLP", "WASM Embeddings"],
     url: "https://github.com/MAVERICK-111/CODEWISER_qwerty",
   },
@@ -108,6 +108,7 @@ export const skills: Skills = {
     "PyTorch",
     "Keras",
     "OpenCV",
+    "Data Preprocessing",
   ],
   "Web Dev": ["React", "Node.js", "MongoDB", "REST APIs", "PostgreSQL"],
   Tools: ["Git", "Linux", "VS Code", "Postman", "Google Colab"],

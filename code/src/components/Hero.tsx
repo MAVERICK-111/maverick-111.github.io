@@ -1,7 +1,16 @@
+import { useState } from "react";
 import { personal } from "../data/content";
 import portraitSrc from "../data/PSP_PORTFOLIO.png";
 
 export default function Hero() {
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText(personal.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section
       id="hero"
@@ -25,12 +34,27 @@ export default function Hero() {
               {personal.tagline}
             </p>
             <div className="hero-cta flex items-center justify-center md:justify-start gap-6">
-              <a
-                href={`mailto:${personal.email}`}
-                className="text-sm font-medium text-stone-800 dark:text-stone-100 border-b border-stone-800 dark:border-stone-300 pb-0.5 hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors duration-200"
-              >
-                Contact me ↗
-              </a>
+              <div className="relative">
+                <a
+                  href={`mailto:${personal.email}`}
+                  onClick={handleEmailClick}
+                  className="text-sm font-medium text-stone-800 dark:text-stone-100 border-b border-stone-800 dark:border-stone-300 pb-0.5 hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors duration-200"
+                >
+                  Contact me ↗
+                </a>
+                {copied && (
+                  <span
+                    className="animate-fade-in absolute -top-10 left-1/2 whitespace-nowrap rounded-md border border-stone-200 bg-white/90 px-3 py-1.5 text-[11px] font-medium text-stone-700 shadow-lg backdrop-blur-sm dark:border-stone-700 dark:bg-stone-800/90 dark:text-amber-400"
+                    style={{ boxShadow: "0 4px 24px 0 rgba(0,0,0,0.12)" }}
+                  >
+                    Copied
+                    <span
+                      className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent"
+                      style={{ borderTopColor: "currentColor", opacity: 0.25 }}
+                    />
+                  </span>
+                )}
+              </div>
               {personal.resumeUrl && personal.resumeUrl !== "#" && (
                 <a
                   href={personal.resumeUrl}
